@@ -1,0 +1,19 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-image: url("../images/starwars-bg.jpg");
+    background-position: 50% 50%;  
+    
+    color: white;
+  }
+  
+  .header-box {
+      text-align: right;
+  }
+
+  .char-img {
+      height: 125px;
+      width: 125px;
+      border: white solid 5px;
+      margin: 15px;
+  }
