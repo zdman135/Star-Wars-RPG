@@ -17,3 +17,30 @@ html, body {
       border: white solid 5px;
       margin: 15px;
   }
+
+  #char-hp-display {
+      color: black;
+      background-color: white;
+      position: relative;
+      bottom: -125px;
+      left: 15px;
+      width: 125px;
+      height: 25px;
+      text-align: center;
+  }
+
+  .add-flex {
+    display: flex;
+  }
+
+  .game-over-loss {
+      position: relative;
+      bottom: 375px;
+      left: 25px;
+  }
+
+  .game-over-won {
+    position: relative;
+    bottom: 175px;
+    left: 25px;
+}
