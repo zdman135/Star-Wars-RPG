@@ -3,34 +3,34 @@ let selectCharacter = [
         "character": "Obiwan Kenobi",
         "image": "assets/images/obiwan.jpg",
         "select": "obiwan",
-        "hp" : 120,
-        "attackPower": 8,
-        "defendPower": 10
+        "hp" : 125,
+        "attackPower": 6,
+        "defendPower": 20
     },
     {
         "character": "Luke Skywalker",
         "image": "assets/images/lukeskywalker.jpg",
         "select": "luke",
-        "hp" : 110,
-        "attackPower": 6,
-        "defendPower": 12
+        "hp" : 100,
+        "attackPower": 8,
+        "defendPower": 25
     },
     {
         "character": "Darth Insidious",
         "image": "assets/images/darthsidious.jpg",
         "select": "insidious",
         "hp" : 150,
-        "attackPower": 10,
-        "defendPower": 8
+        "attackPower": 2,
+        "defendPower": 6
     },
     {
         "character": "Darth Maul",
         "image": "assets/images/darthmaul.jpg",
         "select": "maul",
-        "hp" : 125,
-        "attackPower": 12,
-        "defendPower": 6
-    }
+        "hp" : 175,
+        "attackPower": 1,
+        "defendPower": 4
+    }    
 ];
 
 let selectedCharacter, selectedEnemyCharacter;
@@ -56,34 +56,34 @@ function resetGame() {
             "character": "Obiwan Kenobi",
             "image": "assets/images/obiwan.jpg",
             "select": "obiwan",
-            "hp" : 120,
-            "attackPower": 8,
-            "defendPower": 10
+            "hp" : 125,
+            "attackPower": 6,
+            "defendPower": 20
         },
         {
             "character": "Luke Skywalker",
             "image": "assets/images/lukeskywalker.jpg",
             "select": "luke",
-            "hp" : 110,
-            "attackPower": 6,
-            "defendPower": 12
+            "hp" : 100,
+            "attackPower": 8,
+            "defendPower": 25
         },
         {
             "character": "Darth Insidious",
             "image": "assets/images/darthsidious.jpg",
             "select": "insidious",
             "hp" : 150,
-            "attackPower": 10,
-            "defendPower": 8
+            "attackPower": 2,
+            "defendPower": 6
         },
         {
             "character": "Darth Maul",
             "image": "assets/images/darthmaul.jpg",
             "select": "maul",
-            "hp" : 125,
-            "attackPower": 12,
-            "defendPower": 6
-        }
+            "hp" : 175,
+            "attackPower": 1,
+            "defendPower": 4
+        }    
 ];
     enemies = [];
 
