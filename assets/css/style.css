@@ -15,17 +15,17 @@ html, body {
       height: 125px;
       width: 125px;
       border: white solid 5px;
-      margin: 15px;
+      margin-right: 30px;
   }
 
   #char-hp-display {
       color: black;
       background-color: white;
       position: relative;
-      bottom: -125px;
-      left: 15px;
+      bottom: -180px;
+      left: 0px;
       width: 125px;
-      height: 25px;
+      height: 75px;
       text-align: center;
   }
 
@@ -43,4 +43,23 @@ html, body {
     position: relative;
     bottom: 175px;
     left: 25px;
+}
+
+.outer-box {
+    position: relative;
+    bottom: 35px;
+}
+
+.enemy-characters-title {
+    position: relative;
+    top: 30px;
+}
+
+.enemy-spacing {
+    position: relative;
+    top: 50px;
+}
+
+.attack-area {
+    margin: 25px;
 }

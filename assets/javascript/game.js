@@ -4,32 +4,32 @@ let selectCharacter = [
         "image": "assets/images/obiwan.jpg",
         "select": "obiwan",
         "hp" : 120,
-        "attackPower": 12,
-        "defendPower": 15
+        "attackPower": 8,
+        "defendPower": 10
     },
     {
         "character": "Luke Skywalker",
         "image": "assets/images/lukeskywalker.jpg",
         "select": "luke",
-        "hp" : 100,
-        "attackPower": 10,
-        "defendPower": 10
+        "hp" : 110,
+        "attackPower": 6,
+        "defendPower": 12
     },
     {
         "character": "Darth Insidious",
         "image": "assets/images/darthsidious.jpg",
         "select": "insidious",
         "hp" : 150,
-        "attackPower": 13,
-        "defendPower": 20
+        "attackPower": 10,
+        "defendPower": 8
     },
     {
         "character": "Darth Maul",
         "image": "assets/images/darthmaul.jpg",
         "select": "maul",
         "hp" : 125,
-        "attackPower": 15,
-        "defendPower": 25
+        "attackPower": 12,
+        "defendPower": 6
     }
 ];
 
@@ -52,38 +52,38 @@ function resetGame() {
     $('.container').animate({opacity: "1"});
 
     selectCharacter = [
-    {
-        "character": "Obiwan Kenobi",
-        "image": "assets/images/obiwan.jpg",
-        "select": "obiwan",
-        "hp" : 120,
-        "attackPower": 1,
-        "defendPower": 15
-    },
-    {
-        "character": "Luke Skywalker",
-        "image": "assets/images/lukeskywalker.jpg",
-        "select": "luke",
-        "hp" : 100,
-        "attackPower": 1,
-        "defendPower": 10
-    },
-    {
-        "character": "Darth Insidious",
-        "image": "assets/images/darthsidious.jpg",
-        "select": "insidious",
-        "hp" : 150,
-        "attackPower": 1,
-        "defendPower": 20
-    },
-    {
-        "character": "Darth Maul",
-        "image": "assets/images/darthmaul.jpg",
-        "select": "maul",
-        "hp" : 125,
-        "attackPower": 1,
-        "defendPower": 25
-    }
+        {
+            "character": "Obiwan Kenobi",
+            "image": "assets/images/obiwan.jpg",
+            "select": "obiwan",
+            "hp" : 120,
+            "attackPower": 8,
+            "defendPower": 10
+        },
+        {
+            "character": "Luke Skywalker",
+            "image": "assets/images/lukeskywalker.jpg",
+            "select": "luke",
+            "hp" : 110,
+            "attackPower": 6,
+            "defendPower": 12
+        },
+        {
+            "character": "Darth Insidious",
+            "image": "assets/images/darthsidious.jpg",
+            "select": "insidious",
+            "hp" : 150,
+            "attackPower": 10,
+            "defendPower": 8
+        },
+        {
+            "character": "Darth Maul",
+            "image": "assets/images/darthmaul.jpg",
+            "select": "maul",
+            "hp" : 125,
+            "attackPower": 12,
+            "defendPower": 6
+        }
 ];
     enemies = [];
 
@@ -121,7 +121,7 @@ function startGame(character) {
         outerbox.addClass("outer-box");
 
         div.attr("id", "char-hp-display");
-        div.text("HP: " + character[i].hp);
+        div.html("HP: " + character[i].hp + "<br> Name: " + character[i].character);
 
         img.addClass("char-img");
         img.addClass("character-choice")
@@ -158,8 +158,10 @@ function startGame(character) {
             img.addClass("char-img");
             img.attr("src", selectedCharacter.image);
             img.attr("select-data", selectedCharacter.select)
-            hp.text("Current Health Points: " + selectedCharacter.hp);
-            ap.text("Current Attack Power: " + selectedCharacter.attackPower);
+            hp.html("Name: " + selectedCharacter.character + 
+            "<br> Current Health Points: " + selectedCharacter.hp + "<br>" + 
+            "Current Attack Power: " + selectedCharacter.attackPower);
+            // ap.text("Current Attack Power: " + selectedCharacter.attackPower);
         
             $(".selected-character-title").append(selectedTitle);
             $(".selected-character").append(img);
@@ -180,7 +182,7 @@ function startGame(character) {
                 outerbox.addClass("outer-box");    
         
                 div.attr("id", "char-hp-display");
-                div.text("HP: " + enemies[i].hp);
+                div.html("HP: " + enemies[i].hp + "<br> Name: " + enemies[i].character);
         
                 img.addClass("char-img enemy-character-choice");
                 img.attr("src", enemies[i].image);
@@ -211,8 +213,10 @@ function startGame(character) {
                     img.addClass("char-img");
                     img.attr("src", selectedEnemyCharacter.image);
                     img.attr("select-data", selectedEnemyCharacter.select)
-                    hp.text("Current Health Points: " + selectedEnemyCharacter.hp);
-                    dp.text("Counter Attack Power: " + selectedEnemyCharacter.defendPower);  
+                    hp.html("Name: " + selectedEnemyCharacter.character + 
+                    "<br> Current Health Points: " + selectedEnemyCharacter.hp + "<br>" +
+                    "Counter Attack Power: " + selectedEnemyCharacter.defendPower);
+                    // dp.text("Counter Attack Power: " + selectedEnemyCharacter.defendPower);  
                     button.text("Attack");
     
                     $(".defending-enemy").append(img);
@@ -226,8 +230,10 @@ function startGame(character) {
     
                 img.attr("src", selectedEnemyCharacter.image);
                 img.attr("select-data", selectedEnemyCharacter.select);
-                hp.text("Current Health Points: " + selectedEnemyCharacter.hp);
-                dp.text("Counter Attack Power: " + selectedEnemyCharacter.defendPower);                
+                hp.html("Name: " + selectedEnemyCharacter.character + 
+                    "<br> Current Health Points: " + selectedEnemyCharacter.hp + "<br>" +
+                    "Counter Attack Power: " + selectedEnemyCharacter.defendPower);
+                // dp.text("Counter Attack Power: " + selectedEnemyCharacter.defendPower);                
             } else{
                 var selectedEnemyTitle = $("<h2>");
                 var img = $("<img>");
@@ -240,8 +246,10 @@ function startGame(character) {
                 img.addClass("char-img");
                 img.attr("src", selectedEnemyCharacter.image);
                 img.attr("select-data", selectedEnemyCharacter.select)
-                hp.text("Current Health Points: " + selectedEnemyCharacter.hp);
-                dp.text("Counter Attack Power: " + selectedEnemyCharacter.defendPower);        
+                hp.html("Name: " + selectedEnemyCharacter.character + 
+                    "<br> Current Health Points: " + selectedEnemyCharacter.hp + "<br>" +
+                    "Counter Attack Power: " + selectedEnemyCharacter.defendPower);
+                // dp.text("Counter Attack Power: " + selectedEnemyCharacter.defendPower);        
                 button.text("Attack");
     
                 $(".defending-enemy-title").append(selectedEnemyTitle);
@@ -295,10 +303,14 @@ $( document ).ready(function() {
             }
 
         } else {    
-            $('#player-hp').text("Current Health Points: " + selectedCharacter.hp)
-            $('#player-attack-power').text("Current Attack Power: " + selectedCharacter.attackPower);
-            $('#computer-hp').text("Current Health Points: " + selectedEnemyCharacter.hp)
-            $('#computer-attack-power').text("Counter Attack Power: " + selectedEnemyCharacter.defendPower);   
+            $('#player-hp').html("Name: " + selectedCharacter.character + 
+            "<br> Current Health Points: " + selectedCharacter.hp + "<br>" +
+            "Current Attack Power: " + selectedCharacter.attackPower);
+            // $('#player-attack-power').html("Current Attack Power: " + selectedCharacter.attackPower);
+            $('#computer-hp').html("Name: " + selectedEnemyCharacter.character + 
+            "<br> Current Health Points: " + selectedEnemyCharacter.hp + "<br>" +
+            "Counter Attack Power: " + selectedEnemyCharacter.defendPower);
+            // $('#computer-attack-power').html("Counter Attack Power: " + selectedEnemyCharacter.defendPower);   
         }
     });
 
