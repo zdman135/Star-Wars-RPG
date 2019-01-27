@@ -13,3 +13,9 @@ You can at any time switch an enemy character to attack by selecting that charac
 4. Once you win or lose you can click restart to play again.
 
 I know this game could be better with sound added, but I didn't have time to add that, as that was not part of the assignment. If you are honestly playing this game cause you want something fun... I feel sorry for you. hah!
+
+
+### Additional Notes
+1. The most challenging part to determine was the calculations for each character as each character must be able to die. No character should be unbeatable in the game.
+
+2. Once the calculations were correct, the game was extremely easy to code.
